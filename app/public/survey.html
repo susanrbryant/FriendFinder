@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Find a Friend</title>  
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- CSS --> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+	<link rel="stylesheet" type="text/css" href="/style.css">  -->
+     
+	<!-- JAVASCRIPT FILES -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    
+<!--<script type="text/javascript" src="assets/javascript/javascript.js"></script>-->   
+    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <h1></h1>
+        </div>
+    </header>
+
+
+    <div class="container">
+    
+        <h1>Survey Questions</h1>
+    
+        <div class="row">
+        
+            <form name="" id="" class="col-md-7">
+                <h3>About you</h3>
+                
+                <!-- Name -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="input-name">Name <span class="input-required-small">(Required)</span> <span class="error-message">*</span></label>
+                        <input type="text" name="input-name" placeholder="Your Name" value="" id="input-name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p id="input-name-error" class="error-message"></p>
+                </div>
+             
+                <!-- Photo -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="input-photo">Link to Photo Image <span class="input-required-small">(Required)</span> <span class="error-message">*</span></label>
+                        <input type="url" name="input-photo" placeholder="Link to Photo Image" value="" id="input-photo" class="form-control">
+                    </div>
+                </div>   
+                <div class="col-md-12">
+                    <p id="input-photo-error" class="error-message"></p>
+                </div>
+    
+                <!-- Question 1 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 1</h4>
+                        <p>Do you ride a motorcycle?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q1" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q1-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+        
+                <!-- Question 2 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 2</h4>
+                        <p>Do you like Harley Davidsons</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q2" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q2-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+        
+                <!-- Question 3 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 3</h4>
+                        <p>Do you like women that ride?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q3" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q3-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Question 4 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 4</h4>
+                        <p>Do you own your own motorcycle?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q4" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q4-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Question 5 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 5</h4>
+                        <p>Is your bike over 1500cc?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q5" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q5-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Question 6 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 6</h4>
+                        <p>Do you work on your own bike?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q6" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q6-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Question 7 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 7</h4>
+                        <p>Do you ride often?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q7" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q7-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Question 8 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 8</h4>
+                        <p>Are you a biker that just bar hoops?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q8" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q8-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Question 9 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 9</h4>
+                        <p>Are you in a biker club?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q9" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q9-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Question 10 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Question 10</h4>
+                        <p>Are you a hard core biker?</p>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <select id="q10" class="form-control select-question">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <p id="q10-error" class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Submit -->
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" id="submit-user-form" class="btn btn-primary btn-lg btn-block" >
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+    
+            <!-- FOOTER -->
+            <br><br>
+            <footer class="footer">
+                <div class="row footer-row">
+                    <div class="col-xs-9 col-sm-9 col-md-9">
+                        <div class="copyright">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> by Susan R Bryant
+                        </div>                        
+                    </div>
+                </div>
+            </footer>
+        
+                
+            <div class="col-md-5">
+                    <p id="user-input-img-container">
+                        <img id="user-input-img" src="" alt="">
+                    </p>
+                </div>
+        	<br><br>
+        </div>
+        
+    </div>  
+
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>                    
+                    </div>
+                    <div>
+                        <p id="friend-match-img-container">
+                            <img id="friend-match-img" src="" alt="Friend Finder Result">
+                        </p>
+                    </div>
+                    <div id="friend-match">
+                        <p><!-- Friend Name --></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+	/** 
+	* @function on document load 
+	*/
+	$(document).ready(function(){
+		
+		/** 
+		* @Event Hide or show module when image is returned 
+		*/
+		$('#results-modal').modal('hide');
+	
+		/** 
+		* @functions Remove error messages as the user fils in the on sumbit form
+		* @Events on click  
+		*/
+		$('#input-name').on("click", function(e){			
+			$("#input-name-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#input-photo').on("click", function(e){			
+			$("#input-photo-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q1').on("click", function(e){			
+			$("#q1-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q2').on("click", function(e){			
+			$("#q2-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q3').on("click", function(e){			
+			$("#q3-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q4').on("click", function(e){			
+			$("#q4-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q5').on("click", function(e){			
+			$("#q5-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q6').on("click", function(e){			
+			$("#q6-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q7').on("click", function(e){			
+			$("#q7-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q8').on("click", function(e){			
+			$("#q8-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q9').on("click", function(e){			
+			$("#q9-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+		$('#q10').on("click", function(e){			
+			$("#q10-error").css({display: 'none'}).html('');			
+			e.preventDefault();
+		});
+	
+		/** 
+		* @Function Display users photo when they enter it in
+		* @Events on click  
+		*/
+		$('#input-photo').on("click", function(e){ 
+		
+			e.preventDefault();
+			
+			var inputPhotoDisplay = $("#input-photo").val();	
+		
+			if(inputPhotoDisplay !== ""){
+				$("#user-input-img").attr("src", inputPhotoDisplay);
+			};
+	
+		});			
+		
+	});
+
+
+
+	/** 
+	* @function On submit form
+	* Get the values from all the form files to validate
+	*/
+	$( "form" ).submit(function( event ) {
+	
+		event.preventDefault();
+	
+		var inputName = $("#input-name").val();
+		var inputPhoto = $("#input-photo").val();
+		var getQ1Value = $("#q1").val();
+		var getQ2Value = $("#q2").val();
+		var getQ3Value = $("#q3").val();
+		var getQ4Value = $("#q4").val();
+		var getQ5Value = $("#q5").val();
+		var getQ6Value = $("#q6").val();
+		var getQ7Value = $("#q7").val();
+		var getQ8Value = $("#q8").val();
+		var getQ9Value = $("#q9").val();
+		var getQ10Value = $("#q10").val();
+	
+		/* Error message for all fields */
+		var errorMessge = "Please select an option";
+		
+		/* Validate all fields are not empty - if they are then display error message */	
+		if(inputName === ""){
+			$("#input-name-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#input-name-error").css({display: 'none'}).html('');
+		};	
+		if(inputPhoto === ""){
+			$("#input-photo-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#input-photo-error").css({display: 'none'}).html('');
+		};	
+		if(getQ1Value === ""){
+			$("#q1-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q1-error").css({display: 'none'}).html('');
+		};
+		if(getQ2Value === ""){
+			$("#q2-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q2-error").css({display: 'none'}).html('');	
+		};
+		if(getQ3Value === ""){
+			$("#q3-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q3-error").css({display: 'none'}).html('');	
+		};
+		if(getQ4Value === ""){
+			$("#q4-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q4-error").css({display: 'none'}).html('');	
+		};
+		if(getQ5Value === ""){
+			$("#q5-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q5-error").css({display: 'none'}).html('');	
+		};
+		if(getQ6Value === ""){
+			$("#q6-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q6-error").css({display: 'none'}).html('');	
+		};
+		if(getQ7Value === ""){
+			$("#q7-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q7-error").css({display: 'none'}).html('');	
+		};
+		if(getQ8Value === ""){
+			$("#q8-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q8-error").css({display: 'none'}).html('');	
+		};
+		if(getQ9Value === ""){
+			$("#q9-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q9-error").css({display: 'none'}).html('');	
+		};
+		if(getQ10Value === ""){
+			$("#q10-error").css({display: 'block'}).html(errorMessge);
+		} else {
+			$("#q10-error").css({display: 'none'}).html('');	
+		};
+	
+		/**
+		* @Function
+		* Validate form has all values and ready to be posted
+		*/
+		var validateAll = function(){
+			
+			var hasValue = true;
+			
+			$(".form-control").each(function(){
+				if ($(this).val() === "") {
+					hasValue = false;			
+				}
+			});
+			
+			return hasValue;
+		};
+		
+		var trueFlag = validateAll();
+			
+		if(trueFlag){
+			createJsonObj();
+		};
+	
+		var userObj;
+
+		/** 
+		* @Function Create JSON Object ready to send
+		*/
+		function createJsonObj(){
+			
+			userObj = 
+				JSON.stringify( {
+				name : inputName,
+				photo : inputPhoto,
+				scores : [getQ1Value,getQ2Value,getQ3Value,getQ4Value,getQ5Value,getQ6Value,getQ7Value,getQ8Value,getQ9Value,getQ10Value]
+				} );
+			
+				/** 
+				* @Ajax Post to /api/friends
+				*/	
+				$.post('/api/friends', userObj)
+				.done(function(data) {
+			
+					// Get the results back
+					// display Name & Photo
+					// Display modal
+
+					// This should go into the popup modal
+					$("#friend-match").text(data.name);
+					$("#friend-match-img").attr("src", data.image);
+					$('#results-modal').modal('show');
+					
+				});			
+			};	
+		});
+
+
+
+	
+	
+
+
+</script>
+
+
+</body>
+</html>
